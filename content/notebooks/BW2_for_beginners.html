@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BW2 for Beginners" href="BW25_for_beginners.html" />
-    <link rel="prev" title="“Learn Brightway” Homepage" href="../home.html" />
+    <link rel="next" title="BW25 for Beginners" href="BW25_for_beginners.html" />
+    <link rel="prev" title="“Learn Brightway” Book" href="../home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,7 +169,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../home.html">
-                    “Learn Brightway” Homepage
+                    “Learn Brightway” Book
                 </a>
             </li>
         </ul>
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Brightway2 for Beginners</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="BW25_for_beginners.html">BW2 for Beginners</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BW25_for_beginners.html">BW25 for Beginners</a></li>
 
 
 
@@ -395,7 +395,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-installing-brightway2-and-activity-browser-on-your-computer">Recap: Installing brightway2 and activity browser on your computer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-installing-brightway2-on-your-computer">Recap: Installing brightway2 on your computer</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="visible nav section-nav flex-column">
@@ -426,59 +426,55 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="brightway2-for-beginners">
 <h1>Brightway2 for Beginners<a class="headerlink" href="#brightway2-for-beginners" title="Permalink to this heading">#</a></h1>
-<h3>Table of contents:</h3>
-<ol class="arabic simple">
-<li><p><span class="xref myst">Installing anaconda</span></p></li>
-<li><p><span class="xref myst">Using Conda to download the brightway2 package</span></p></li>
-<li><p><span class="xref myst">Setting up an environment</span></p></li>
-<li><p><span class="xref myst">Opening an environment</span></p></li>
-<li><p><span class="xref myst">Channels</span></p></li>
-<li><p><span class="xref myst">Maintaining an environment</span></p></li>
-<li><p><span class="xref myst">Saving, sharing and restoring an environment</span></p></li>
-<li><p><span class="xref myst">Recap: Installing brightway2 and activity browser on your computer</span></p></li>
-<li><p><span class="xref myst">Preparing the Notebook</span></p></li>
-<li><p><span class="xref myst">Using Brightway</span></p></li>
-</ol>
 <section id="installing-anaconda">
 <h2>Installing anaconda<a class="headerlink" href="#installing-anaconda" title="Permalink to this heading">#</a></h2>
-<p>Anaconda is a python distribution that can manage different packages and deploy them using ‘conda’. The distribution is available in two forms.</p>
+<p>[Anaconda is a python distribution](<a class="reference external" href="https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)">https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)</a> comes with the useful <code class="docutils literal notranslate"><span class="pre">conda</span></code> package manager. The distribution is available in two forms:</p>
 <ol class="arabic simple">
-<li><p><b><a href=https://www.anaconda.com/about-us>Anaconda</a></b> is a full fledged distribution with multiple packages installed. It comes with a wide range of data analysis, machine learning, and scientific computing libraries pre-installed, making it a comprehensive package for data scientists.
-Anaconda can be installed from the <a href=https://www.anaconda.com/download>download page</a> of their website. It downloads an installer based on your operating system.</p></li>
-<li><p><b><a href=https://docs.conda.io/projects/miniconda/en/latest/>Miniconda</a></b> is a minimal distribution that only includes python and conda.Miniconda can be downloaded directly from their main page, its lightweight and installs quickly.</p></li>
+<li><p><strong><a class="reference external" href="https://www.anaconda.com/about-us">Anaconda</a></strong> is a full fledged distribution with multiple packages installed. It comes with a wide range of data analysis, machine learning, and scientific computing libraries pre-installed, making it a comprehensive package for data scientists.
+Anaconda can be installed from the <a class="reference external" href="https://www.anaconda.com/download">Anaconda download page</a>.</p></li>
+<li><p><strong><a class="reference external" href="https://docs.conda.io/projects/miniconda/en/latest/">Miniconda</a></strong> is a minimal distribution that only includes <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">conda</span></code>. This allows you to create a lightweight and customized Python environment. With Miniconda, you have more control over which packages you want to install, making it a good choice for users who want to build their own Python environments tailored to their specific needs. Miniconda can be installed from the <a class="reference external" href="https://www.anaconda.com/download">Anaconda download page</a>.</p></li>
 </ol>
-<p>Both Anaconda and Miniconda can be used to download Brightway into your computer. <br>
-<i><b>INFO:</b> We recommend downloading Anaconda distribution.</i></p>
+<p>Both Anaconda and Miniconda can be used to download Brightway into your computer.</p>
 </section>
 <section id="using-conda-to-download-the-brightway2-package">
 <h2>Using Conda to download the brightway2 package<a class="headerlink" href="#using-conda-to-download-the-brightway2-package" title="Permalink to this heading">#</a></h2>
-<p>There are different versions of Brightway (1, 2 &amp; 2.5) and the differences between them are explained in this <a href =https://docs.brightway.dev/en/latest/content/faq/brightway.html>page</a>.</p>
-<p>This notebook will demonstrate the use of <b>Brightway version 2</b>.</p>
-<p>A documentation explaining how to <a href=https://docs.brightway.dev/en/legacy/content/faq/brightway.html>install brightway</a> is available in the documentation which is the same as explained below.<br>
-Once you install Anaconda or Miniconda, you can access the Anaconda Navigator <b>(See option 1</b>, <i>only if you download the Anaconda distribution)</i> or you can access the Anaconda prompt <b>(See option 2</b>, <i>available in both Anaconda &amp; Miniconda distribution).</i></p>
+<p>There are different versions of Brightway (1, 2 &amp; 2.5) and the differences between them are explained in this <a class="reference external" href="https://docs.brightway.dev/en/latest/content/faq/brightway.html">page</a>.</p>
+<p>This notebook will demonstrate the use of <strong>Brightway version 2</strong>.</p>
+<p>A documentation explaining how to <a class="reference external" href="https://docs.brightway.dev/en/legacy/content/faq/brightway.html">install brightway</a> is available in the documentation which is the same as explained below.</p>
+<p>Once you install Anaconda or Miniconda, you can access the Anaconda Navigator <strong>(See option 1</strong>, <em>only if you download the Anaconda distribution</em>) or you can access the Anaconda prompt <strong>(See option 2</strong>, <em>available in both Anaconda &amp; Miniconda distribution).</em></p>
 <ol class="arabic simple">
-<li><p><b>Anaconda Navigator</b> is a Graphical User Inteface to download the required packages. It is recommended to <i><b>create an environment</i></b> where you will install brightway. An environment allows you to have different versions of installed packages. For instance, brightway 2 requires a specific version of background libraries that are necessary to run brightway smoothly.<br>
-If you install all your projects in the same environment, you might run into issues. Creating an environment avoids such issues. More information on how to handle environments are explained below.<br>
-To create environment, click on the <b>Environments</b> tab in the left and below you will find an option called <b>Create</b> which will create a new environment with your desired name. <br><br>
-<i><b>Note: </b>An environment name cannot be repeated.</i><br><br>
-Once you create an environment, on the <i><b>top right corner</i></b> in the search bar search for <i><b>brightway2</i></b> and install (all the necessary libraries are automatically installed).<br>
-To run jupyter notebook, click on <b>Home</b> from the top left corner of the navigator (Ensure the correnct environment is selected i.e <i>bw</i>) and then click on <b>Launch</b> under Jupyterlab or Jupter notebook.<br>
-To deactivate an environment after work, simply click on the base or another environment from the Anaconda Navigator.<br><br>
-<i><b>Note:</b> The notebook launches in the default directory i.e., the home directory. Changing it is complicated that to use Anaconda prompt to install jupyter which is explained below.</i><br><br></p></li>
-<li><p><b>Anaconda prompt</b> is a console environment that is available in both Anaconda and Miniconda distributions. Copy the following code into the anaconda prompt.</p></li>
+<li><p><strong>Anaconda Navigator</strong> is a Graphical User Inteface to download the required packages. It is recommended to <em>create an environment</em> where you will install brightway. An environment allows you to have different versions of installed packages. For instance, brightway 2 requires a specific version of background libraries that are necessary to run brightway smoothly.</p></li>
 </ol>
-<pre><code>conda create -n bw brightway2 jupyterlab</code></pre>
-<p>This code creates an environment named <i><b>’bw’</i></b> that can be changed and it also installs <i><b>jupyterlab</i></b> that allows to use a web based interface to execute python code.<br>
-In order to use brightway, you must activate the environment using the following code:</p>
-<pre></code>conda activate bw</code></pre>
-<p><i><b>Note</b></i>: <i>If you are using another editor or an Integrated Development Environment (IDE) such as pycharm, VSCode, spyder or others remember to select/setup the appropriate environment before executing the code.</i><br><br>
-To use jupter notebook such as this file, after activating the environment run the following code:</p>
-<pre></code>jupter notebook</code></pre>
-<p><i><b>Note</i></b>: <i>Remember to navigate to the desired folder before executing the above code as it is complicated to go out of the folder to save your notebook after it starts</i>.<br><br>
-To deactivate the environment after working on your project use the following code:</p>
-<pre></code>conda deactivate</code></pre>
-<p><i><b>Note:</b> In order to deactivate, you must first save and close the jupyter notebook. <b>Save your work before quitting</b>. Go to the home page of the notebook (the page that shows you the directory and different files and click on <b>quit</b></i>.<br><br>
-<i><b>Imp Note:</b> Clicking on <b>logout</b> will not quit the jupyter notebook and you cannot provide an input into the terminal. In such cases, press <b>CNTRL+C</b> (Windows &amp; Mac) to quit jupyter notebook which allows you to then deactivate the environment.</p>
+<p>If you install all your projects in the same environment, you might run into issues. Creating an environment avoids such issues. More information on how to handle environments are explained below.</p>
+<p>To create environment, click on the <strong>Environments</strong> tab in the left and below you will find an option called <strong>Create</strong> which will create a new environment with your desired name.</p>
+<p><strong>Note: An environment name cannot be repeated.</strong></p>
+<p>Once you create an environment, on the <em>top right corner</em> in the search bar search for <em>brightway2</em> and install (all the necessary libraries are automatically installed).</p>
+<p>To run jupyter notebook, click on <strong>Home</strong> from the top left corner of the navigator (Ensure the correnct environment is selected i.e <em>bw</em>) and then click on <strong>Launch</strong> under Jupyterlab or Jupter notebook.</p>
+<p>To deactivate an environment after work, simply click on the base or another environment from the Anaconda Navigator.</p>
+<p><strong>Note: The notebook launches in the default directory i.e., the home directory. Changing it is complicated that to use Anaconda prompt to install jupyter which is explained below.</strong></p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Anaconda prompt</strong> is a console environment that is available in both Anaconda and Miniconda distributions. Copy the following code into the anaconda prompt.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>bw<span class="w"> </span>brightway2<span class="w"> </span>jupyterlab
+</pre></div>
+</div>
+<p>This code creates an environment named <em>‘bw’</em> that can be changed and it also installs <em>jupyterlab</em> that allows to use a web based interface to execute python code.</p>
+<p>In order to use brightway, you must activate the environment using the following code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>bw
+</pre></div>
+</div>
+<p>Note: If you are using another editor or an Integrated Development Environment (IDE) such as pycharm, VSCode, spyder or others remember to select/setup the appropriate environment before executing the code.</p>
+<p>To use jupter notebook such as this file, after activating the environment run the following code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupter<span class="w"> </span>notebook
+</pre></div>
+</div>
+<p>Note: Remember to navigate to the desired folder before executing the above code as it is complicated to go out of the folder to save your notebook after it starts.</p>
+<p>To deactivate the environment after working on your project use the following code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate
+</pre></div>
+</div>
+<p>Note: In order to deactivate, you must first save and close the jupyter notebook. Save your work before quitting. Go to the home page of the notebook (the page that shows you the directory and different files and click on <code class="docutils literal notranslate"><span class="pre">quit</span></code>.</p>
+<p>Imp Note: Clicking on <code class="docutils literal notranslate"><span class="pre">logout</span></code> will not quit the jupyter notebook and you cannot provide an input into the terminal. In such cases, press <code class="docutils literal notranslate"><span class="pre">CTR+C</span></code>(Windows &amp; Mac) to quit jupyter notebook which allows you to then deactivate the environment.</p>
 <p>After working with brightway, remember to deactivate the environment either using Anaconda Navigator or Anaconda prompt.</p>
 </section>
 <section id="working-with-environments">
@@ -488,7 +484,9 @@ To deactivate the environment after working on your project use the following co
 <p>You will work with environments in conda, see the official <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">conda page</a>.</p>
 <p><strong>“A conda environment is a directory that contains a specific collection of conda packages that you have installed.”</strong> When you install Brightway, they will be installed in a specific environment which will contain all necessary packages. You can e.g. have one environment for brightway2, and one for brightway25.</p>
 <p>When you will install e.g. Brightway2, you will execute this line:</p>
-<pre></code>conda create -n bw brightway2 jupyterlab</code></pre>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>bw<span class="w"> </span>brightway2<span class="w"> </span>jupyterlab
+</pre></div>
+</div>
 <p>This is the conda command for creating a new environment, which is called <strong>“bw”</strong>. Only running ‘’‘“conda create -n bw”’’’ would simply set up a new env, but empty without any packages in it. Adding “brightway2” or “jupyterlab” or “python” will install the respective package. You can also specify the <strong>version number of the package</strong>, e.g. <em><strong>“python =3.10”</strong></em>. This is sometimes useful, when packages are not yet aligned well in terms of versions, i.e. bw is not yet adapted to use the very latest version of python. You can add as many packages as you want to the conda create command. See <span class="xref myst">below</span> for an explanation how conda knows where to fetch the packages.</p>
 <p>By default, environments are installed into the envs directory in your conda directory. If you want to know more, this page explains more on the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#">management of environments</a>:</p>
 <p><strong>“If you change one environment, your other environments are not affected.”</strong> However, the environments on your computer talk to each other. When you will create a new environment, and a new project in it, you will be able to see that new project in Activity browser (a graphical user interface for brightway for more information click <span class="xref myst">here</span>. You can create as many projects as you want in one environment.</p>
@@ -539,8 +537,8 @@ You can save your yml in the folder you want. Your project folder, and/or a dedi
 </section>
 </section>
 </section>
-<section id="recap-installing-brightway2-and-activity-browser-on-your-computer">
-<h2>Recap: Installing brightway2 and activity browser on your computer<a class="headerlink" href="#recap-installing-brightway2-and-activity-browser-on-your-computer" title="Permalink to this heading">#</a></h2>
+<section id="recap-installing-brightway2-on-your-computer">
+<h2>Recap: Installing brightway2 on your computer<a class="headerlink" href="#recap-installing-brightway2-on-your-computer" title="Permalink to this heading">#</a></h2>
 <p>You may already have installed bw2 and ab while reading above.</p>
 <p>In case not, or in case you want this to be summarised, here’s how to get these two packages on your computer:</p>
 <p><span class="xref myst">Brightway2</span>: Follow the setup instruction from bw2 <a class="reference external" href="https://docs.brightway.dev/en/legacy/content/setup/setup.html">here</a>.</p>
@@ -639,6 +637,14 @@ Use `projects.report()` to get a report on all projects.
 <h3>Access the saved project<a class="headerlink" href="#access-the-saved-project" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#If you want to know, where the project is saved on your computer (directory, you can do this)</span>
+<span class="n">bw</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">dir</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The set current function loads the project and all the databases attached to the project if previously stored</span>
 <span class="n">bw</span><span class="o">.</span><span class="n">projects</span><span class="o">.</span><span class="n">set_current</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">)</span>
 </pre></div>
@@ -718,7 +724,7 @@ Creating core data migrations
 <h4>Loading external databases into brightway<a class="headerlink" href="#loading-external-databases-into-brightway" title="Permalink to this heading">#</a></h4>
 <p>Since most of the LCA practitioners use Ecoinvent to model their processes, in this example we show how to import Ecoinvent database into brightway. Please note same steps can be adopted to import any other database into brightway.<br>
 <em><strong>Note:</strong> Brightway can load in different data formats such as ‘ecospold’, ‘excel’. If using ecoinvent ecospold format, provide the directory where the extracted datasets are available</em><br />
-<em><strong>Imp Note:</strong> Always asign a variable to load all the data which is later used to perform other functions.</em></p>
+<em><strong>Imp Note:</strong> Always assign a variable to load all the data which is later used to perform other functions.</em></p>
 <p><em><strong>Note:</strong> <code>.SingleOutputEcospold2Importer</code> is a function that loads all the datasets that are in ecospold or <code>.spold</code> format. It takes two main arguments, the path to the file and the name of the dataset you would like to save it as in the project.</em></p>
 <p><em><strong>Imp Note:</strong> If you are using an older version of ecospold, use <code>.SingleOutputEcospold1Importer</code>.</em></p>
 <div class="cell docutils container">
@@ -814,7 +820,7 @@ Created database: ev391cutoff
 </div>
 </div>
 </div>
-<p>Now lets see what databases are existing in our project. Use <code>.databases&lt;./code&gt; to <strong>bw</strong> variable.</p>
+<p>Now lets see what databases are existing in our project. Use <code>.databases</code> to <strong>bw</strong> variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">bw</span><span class="o">.</span><span class="n">databases</span><span class="p">)</span>
@@ -976,7 +982,7 @@ Created database: hydrogen_demo
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">“Learn Brightway” Homepage</p>
+        <p class="prev-next-title">“Learn Brightway” Book</p>
       </div>
     </a>
     <a class="right-next"
@@ -984,7 +990,7 @@ Created database: hydrogen_demo
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">BW2 for Beginners</p>
+        <p class="prev-next-title">BW25 for Beginners</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1017,7 +1023,7 @@ Created database: hydrogen_demo
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-installing-brightway2-and-activity-browser-on-your-computer">Recap: Installing brightway2 and activity browser on your computer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-installing-brightway2-on-your-computer">Recap: Installing brightway2 on your computer</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-notebook">Preparing the Notebook</a><ul class="visible nav section-nav flex-column">
